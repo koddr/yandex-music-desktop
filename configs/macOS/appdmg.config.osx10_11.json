@@ -1,0 +1,21 @@
+{
+  "title": "Yandex.Music Desktop",
+  "icon": "../../static/macOS/yamusic_desktop.icns",
+  "background": "../../static/macOS/yamusic_desktop.background.png",
+  "format": "ULFO",
+  "window": {
+    "size": {
+      "width": 640,
+      "height": 400
+    }
+  },
+  "contents": [
+    {
+      "x": 192,
+      "y": 244,
+      "type": "file",
+      "path": "../../build/macOS/Yandex.Music Desktop.app"
+    },
+    { "x": 448, "y": 244, "type": "link", "path": "/Applications" }
+  ]
+}
