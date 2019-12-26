@@ -6,7 +6,7 @@
 
 <p align="center"><em>The author of this desktop port <strong>is not</strong> responsible for long support of this desktop application, because YANDEX LLC may changes the way it provides content and/or releases its own desktop application.</em></p>
 
-## The Why
+## 💭 The Why?
 
 <img width="140px" align="right" src="static/macOS/yamusic_desktop.png" alt="Yandex.Music logo"/>
 
@@ -18,7 +18,14 @@ I love listen music 🥰 and always want to do it as easy as possible. Concept o
 
 Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Windows/Linux) desktop application... and created this port of the official Yandex.Music website! 😉
 
-## Under the hood
+## 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version:
+
+- [macOS 10.4+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.1.0/yamusic_desktop.osx10_4x64.dmg) (`.dmg`, 2.34 MB)
+- [macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.1.0/yamusic_desktop.osx10_11x64.dmg) (`.dmg`, 2.39 MB)
+
+GNU/Linux and MS Windows → comming as soon as possible.
+
+## ⚙️ Under the hood
 
 Since this is an open source project, you can easily see how it all **actually works**. The code is written with Go (Golang) `1.13.4` and using `Go Modules`.
 
@@ -64,18 +71,7 @@ It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and MSHTML (IE10/11) on Wind
 
 </details>
 
-## List of supports OS
-
-Installation `.dmg` image for:
-
-- macOS 10.4+ x64
-- macOS 10.11+ x64
-
-GNU/Linux and MS Windows → comming as soon as possible.
-
-### 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version of _Yandex.Music Desktop_ from Assets on Releases page.
-
-## Terms of Use of Yandex.Music
+## ⚠️ Terms of Use of Yandex.Music
 
 All logos, images and Yandex.Music service website — belong to their respective owners, namely YANDEX LLC.
 
