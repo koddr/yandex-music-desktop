@@ -18,4 +18,4 @@ If you download, install and run _Yandex.Music Desktop_ application from current
 
 ## License
 
-Yandex.Music Desktop (by [Vic Shóstak]) is an open source software under [MIT](LICENSE) license.
+Yandex.Music Desktop (by [Vic Shóstak](https://github.com/koddr)) is an open source software under [MIT](LICENSE) license.
