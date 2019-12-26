@@ -71,6 +71,46 @@ It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and MSHTML (IE10/11) on Wind
 
 </details>
 
+Installation `.dmg` images for macOS was created by [node-appdmg](https://github.com/LinusU/node-appdmg) (many thx to [Linus Unnebäck](https://github.com/LinusU)).
+
+### For developers
+
+1. Clone this repository and go to folder `yandex-music-desktop`:
+
+```console
+foo@bar:~$ git clone https://github.com/koddr/yandex-music-desktop.git
+foo@bar:~$ cd yandex-music-desktop
+```
+
+2. Change anything you want 👌
+3. Build app binary again (at this moment, only for macOS), it's required `Go` 1.13+:
+
+```console
+foo@bar:~$ make build-macos
+```
+
+4. Go to `./build` folder and copy `Yandex.Music Desktop.app` to your `/Applications`:
+
+```console
+foo@bar:~$ sudo cp -R ./build/Yandex.Music\ Desktop.app /Applications
+```
+
+#### (Optional) Create macOS installation images
+
+- Install `node-appdmg` (required `Node.js` and `npm`):
+
+```console
+foo@bar:~$ npm install -g appdmg
+```
+- Create macOS installation image (`.dmg`):
+
+```console
+foo@bar:~$ make installer-macos-10_4 # for macOS 10.4+
+foo@bar:~$ make installer-macos-10_11 # for macOS 10.11+
+```
+
+- You can found created image into `./releases` folder.
+
 ## ⚠️ Terms of Use of Yandex.Music
 
 All logos, images and Yandex.Music service website — belong to their respective owners, namely YANDEX LLC.
