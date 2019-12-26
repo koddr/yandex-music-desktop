@@ -2,7 +2,7 @@
 
 ![Yandex.Music Desktop (un-official port of website)](static/GitHub/macOS_installer_screenshot.jpg)
 
-<p align="center"><strong>Please note:</strong> this is <em>only</em> desktop port of <a href="https://music.yandex.ru" target="_blank">Yandex.Music</a> website.</p>
+<p align="center"><strong>Please note:</strong> this is <em>only</em> desktop port of <a href="https://music.yandex.com" target="_blank">Yandex.Music</a> website.</p>
 
 <p align="center"><em>The author of this desktop port <strong>is not</strong> responsible for long support of this desktop application, because YANDEX LLC may changes the way it provides content and/or releases its own desktop application.</em></p>
 
@@ -68,7 +68,7 @@ It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and MSHTML (IE10/11) on Wind
 
 All logos, images and Yandex.Music service website — belong to their respective owners, namely YANDEX LLC.
 
-If you download, install and run _Yandex.Music Desktop_ application from current repository, you're already agree with official **Terms of Use of Yandex.Music**: [EN](https://yandex.ru/legal/music_termsofuse/?lang=en), [RU](https://yandex.ru/legal/music_termsofuse/?lang=en), [BY](https://yandex.ru/legal/music_termsofuse/?lang=en), [KZ](https://yandex.ru/legal/music_termsofuse/?lang=en).
+If you download, install and run _Yandex.Music Desktop_ application from current repository, you're already agree with official **Terms of Use of Yandex.Music**: [EN](https://yandex.com/legal/music_termsofuse/?lang=en), [RU](https://yandex.ru/legal/music_termsofuse/?lang=ru), [BY](https://yandex.by/legal/music_termsofuse/?lang=by), [KZ](https://yandex.kz/legal/music_termsofuse/?lang=kz).
 
 ## Developers
 
