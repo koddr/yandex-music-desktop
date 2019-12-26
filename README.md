@@ -64,6 +64,17 @@ It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and MSHTML (IE10/11) on Wind
 
 </details>
 
+## List of supports OS
+
+Installation `.dmg` image for:
+
+- macOS 10.4+ x64
+- macOS 10.11+ x64
+
+GNU/Linux and MS Windows → comming as soon as possible.
+
+### 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version of _Yandex.Music Desktop_ from Assets on Releases page.
+
 ## Terms of Use of Yandex.Music
 
 All logos, images and Yandex.Music service website — belong to their respective owners, namely YANDEX LLC.
