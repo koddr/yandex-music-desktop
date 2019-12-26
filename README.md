@@ -10,19 +10,49 @@
 
 <img width="140px" align="right" src="static/macOS/yamusic_desktop.png" alt="Yandex.Music logo"/>
 
-I love listen music and always want to do it as easy as possible. Concept of Yandex.Music service (web for desktop clients and app for mobile) are great, but not so really.
+I love listen music 🥰 and always want to do it as easy as possible. Concept of Yandex.Music service (web for desktop clients and app for mobile) are great, **but not so really**.
 
-- First (and most important): my smartphone is always busy with other applications that use headphones (Skype, Zoom, mobile calls and so on).
-- Second (and no less important): I, as an active Mac user, got used to native desktop applications for listening to music, for example, iTunes.
+- **First** (and most important): I would like to always keep application music app _on hand_ while working at Mac/MacBook. Quickly click on the icon in macOS dock, open app, switch to another song and collapse again. At the same time, without opening a browser and not looking for the desired tab with Yandex.Music.
+- **Second** (and important too): my smartphone is _always busy_ with other applications that use headphones with mic, like Skype, Zoom, Discord, mobile calls and so on. In order not to run into browser, look for a tab and pause music. Just took off these headphones and put on others!
+- **Third** (and no less important): as an active macOS user, I got used to _native desktop apps_ for listening music (for example, built-in Apple iTunes) and place it on side-mode with another apps (like Telegram) on a separate workspace.
 
-Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Windows/Linux) desktop application... and created this port for official Yandex.Music website! 😉
+Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Windows/Linux) desktop application... and created this port of the official Yandex.Music website! 😉
 
 ## Under the hood
 
-Since this is an open source project, you can easily see how it all **actually works**. The code is written with Go (Golang) `1.13.4` and using `Go Modules`. But all magic is done by absolutely awesome [zserge/webview](https://github.com/zserge/webview) module.
+Since this is an open source project, you can easily see how it all **actually works**. The code is written with Go (Golang) `1.13.4` and using `Go Modules`.
 
 <details>
-<summary>More info about module</summary>
+<summary>Yandex.Music Desktop source code</summary><br/>
+
+```go
+package main
+
+import "github.com/zserge/webview"
+
+func main() {
+	// Webview options:
+	//  - name: Yandex.Music Desktop
+	name := "Yandex.Music Desktop"
+	//  - URL to login screen: https://passport.yandex.com/auth?...
+	url := "https://passport.yandex.com/auth?origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
+	//  - sizes: 800x800 px
+	width := 800
+	height := 800
+	//  - resizable: true
+	resizable := true
+
+	// Let's open window app with options:
+	webview.Open(name, url, width, height, resizable)
+}
+
+```
+</details>
+
+But all magic is done by absolutely awesome [webview](https://github.com/zserge/webview) module by [Serge Zaitsev](https://github.com/zserge).
+
+<details>
+<summary>More about webview module</summary><br/>
 
 A tiny cross-platform webview library for C/C++/Golang to build modern cross-platform GUIs. Also, there are Rust bindings, Python bindings, Nim bindings, Haskell and C# bindings available.
 
@@ -30,7 +60,7 @@ It supports two-way JavaScript bindings (to call JavaScript from C/C++/Go and to
 
 It uses Cocoa/WebKit on macOS, gtk-webkit2 on Linux and MSHTML (IE10/11) on Windows.
 
-![zserge/webview demo](https://github.com/zserge/webview/raw/master/examples/todo-go/screenshots/screenshots.png")
+![zserge/webview demo](https://github.com/zserge/webview/raw/master/examples/todo-go/screenshots/screenshots.png)
 
 </details>
 
