@@ -20,8 +20,8 @@ Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Window
 
 ## 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version:
 
-- [macOS 10.4+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.1.0/yamusic_desktop.osx10_4x64.dmg) (`.dmg`, 2.34 MB)
-- [macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.1.0/yamusic_desktop.osx10_11x64.dmg) (`.dmg`, 2.39 MB)
+- [macOS 10.4+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.0/yamusic_desktop.osx10_4x64.dmg) (`.dmg`, 2.34 MB)
+- [macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.0/yamusic_desktop.osx10_11x64.dmg) (`.dmg`, 2.39 MB)
 
 GNU/Linux and MS Windows → comming as soon as possible.
 
@@ -54,6 +54,7 @@ func main() {
 }
 
 ```
+
 </details>
 
 But all magic is done by absolutely awesome [webview](https://github.com/zserge/webview) module by [Serge Zaitsev](https://github.com/zserge).
@@ -102,6 +103,7 @@ foo@bar:~$ sudo cp -R ./build/Yandex.Music\ Desktop.app /Applications
 ```console
 foo@bar:~$ npm install -g appdmg
 ```
+
 - Create macOS installation image (`.dmg`):
 
 ```console
@@ -110,6 +112,10 @@ foo@bar:~$ make installer-macos-10_11 # for macOS 10.11+
 ```
 
 - You can found created image into `./releases` folder.
+
+### For designers
+
+At `./static/macOS` folder you can found layered Adobe Photoshop source file (`.psd`) of macOS installation image: `yamusic_desktop.background.psd` ([CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0)).
 
 ## ⚠️ Terms of Use of Yandex.Music
 
@@ -134,4 +140,6 @@ Thanks for your support! 😘 Together, we make this project better every day.
 
 ## License
 
-_Yandex.Music Desktop_ (by [Vic Shóstak](https://github.com/koddr)) is an open source software under [MIT](LICENSE) license.
+_Yandex.Music Desktop_ by [Vic Shóstak](https://github.com/koddr) is an open source software under [MIT](LICENSE) license.
+
+Background image for macOS installer is designed by [Vic Shóstak](https://github.com/koddr) and under [CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0) license.
