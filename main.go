@@ -6,8 +6,8 @@ func main() {
 	// Webview options:
 	//  - name: Yandex.Music Desktop
 	name := "Yandex.Music Desktop"
-	//  - URL to login screen: https://passport.yandex.ru/auth?...
-	url := "https://passport.yandex.ru/auth?origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.ru%2Fhome"
+	//  - URL to login screen: https://passport.yandex.com/auth?...
+	url := "https://passport.yandex.com/auth?origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
 	//  - sizes: 800x800 px
 	width := 800
 	height := 800
