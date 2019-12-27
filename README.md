@@ -27,7 +27,7 @@ Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Window
 ## 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version:
 
 - [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.1/yamusic_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
-- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.1/yamusic_desktop-windows-10-amd64.zip) (`.zip`, 2.20 MB)
+- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.1/yamusic_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
 
 GNU/Linux → coming as soon as possible.
 
