@@ -98,7 +98,7 @@ foo@bar:~$ cd yandex-music-desktop
 foo@bar:~$ make build-macos # build .app for macOS
 ```
 
-OR for Windows 10:
+- OR for Windows 10:
 
 ```console
 foo@bar:~$ go get github.com/karalabe/xgo # install xgo cross compiler
