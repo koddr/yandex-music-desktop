@@ -6,6 +6,10 @@
 
 <p align="center"><em>The author of this desktop port <strong>is not</strong> responsible for long support of this desktop application, because YANDEX LLC may changes the way it provides content and/or releases its own desktop application.</em></p>
 
+## Looking for Yandex.Radio Desktop?
+
+- [Un-official Yandex.Radio Desktop app](https://github.com/koddr/yandex-radio-desktop)
+
 ## 💭 The Why?
 
 <img width="140px" align="right" src="static/macOS/yamusic_desktop.png" alt="Yandex.Music logo"/>
