@@ -1,4 +1,4 @@
-<h1 align="center">🎵 Yandex.Music Desktop (un-official port of website)</h1>
+<h1 align="center">🎵 <span style="color:red">Y</span>andex.Music Desktop (un-official port of website)</h1>
 
 ![Yandex.Music Desktop (un-official port of website)](static/GitHub/macOS_installer_screenshot.jpg)
 
