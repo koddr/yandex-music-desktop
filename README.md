@@ -2,7 +2,7 @@
 
 ![Yandex.Music Desktop (un-official port of website)](static/GitHub/macOS_installer_screenshot.jpg)
 
-<h2 align="center"><strong>Please note:</strong> this is <em>only</em> webview port of <a href="https://music.yandex.com" target="_blank">Yandex.Music</a> website as desktop app!</h2>
+<h3 align="center"><strong>Please note:</strong> this is <em>only</em> webview port of <a href="https://music.yandex.com" target="_blank">Yandex.Music</a> website as desktop app!</h3>
 
 <br/>
 
