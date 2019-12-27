@@ -8,7 +8,7 @@
 
 ## Looking for Yandex.Radio Desktop?
 
-- [Un-official Yandex.Radio Desktop app](https://github.com/koddr/yandex-radio-desktop)
+- 📻 [Un-official Yandex.Radio Desktop app](https://github.com/koddr/yandex-radio-desktop)
 
 ## 💭 The Why?
 
