@@ -92,13 +92,13 @@ foo@bar:~$ cd yandex-music-desktop
 ```
 
 2. Change anything you want 👌
-3. Build app binary again (at this moment, only for macOS), it's required `Go` 1.13+:
+3. Build app binary again for macOS (it's required `Go` 1.13+):
 
 ```console
 foo@bar:~$ make build-macos # build .app for macOS
 ```
 
-3.1 For Windows 10 build:
+OR for Windows 10:
 
 ```console
 foo@bar:~$ go get github.com/karalabe/xgo # install xgo cross compiler
@@ -107,13 +107,13 @@ foo@bar:~$ make build-windows # build .exe for Windows 10
 
 4. Go to `./build/<macOS|Windows>` folder
 
-4.1. Copy `Yandex.Music Desktop.app` to your `/Applications` folder on macOS:
+- Copy `Yandex.Music Desktop.app` to your `/Applications` folder on macOS:
 
 ```console
 foo@bar:~$ sudo cp -R ./build/macOS/Yandex.Music\ Desktop.app /Applications
 ```
 
-4.2. Copy `Yandex.Music Desktop.exe` to anything you want on Windows 10 system!
+- OR copy `Yandex.Music Desktop.exe` to anything you want on Windows 10 system!
 
 #### (Optional) Create macOS installation images
 
