@@ -3,17 +3,19 @@ package main
 import "github.com/zserge/webview"
 
 func main() {
-	// Webview options:
-	//  - name: Yandex.Music Desktop
-	name := "Yandex.Music Desktop"
-	//  - URL to login screen: https://passport.yandex.com/auth?...
-	url := "https://passport.yandex.com/auth?origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
-	//  - sizes: 800x800 px
-	width := 800
-	height := 800
-	//  - resizable: true
-	resizable := true
+	// URL params
+	p := "origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
 
-	// Let's open window app with options:
-	webview.Open(name, url, width, height, resizable)
+	// Init app with webview options
+	w := webview.New(webview.Settings{
+		Title:     "Yandex.Music Desktop",
+		URL:       "https://passport.yandex.com/auth?" + p,
+		Width:     800,
+		Height:    960,
+		Resizable: true,
+		Debug:     false,
+	})
+
+	// Run app
+	w.Run()
 }

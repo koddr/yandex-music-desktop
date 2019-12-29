@@ -26,8 +26,8 @@ Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Window
 
 ## 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version:
 
-- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.2/yamusic_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
-- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.2/yamusic_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
+- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.3/yamusic_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
+- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.3/yamusic_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
 
 GNU/Linux → coming as soon as possible.
 
@@ -44,21 +44,22 @@ package main
 import "github.com/zserge/webview"
 
 func main() {
-	// Webview options:
-	//  - name: Yandex.Music Desktop
-	name := "Yandex.Music Desktop"
-	//  - URL to login screen: https://passport.yandex.com/auth?...
-	url := "https://passport.yandex.com/auth?origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
-	//  - sizes: 800x800 px
-	width := 800
-	height := 800
-	//  - resizable: true
-	resizable := true
+	// URL params
+	p := "origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
 
-	// Let's open window app with options:
-	webview.Open(name, url, width, height, resizable)
+	// Init app with webview options
+	w := webview.New(webview.Settings{
+		Title:     "Yandex.Music Desktop",
+		URL:       "https://passport.yandex.com/auth?" + p,
+		Width:     800,
+		Height:    960,
+		Resizable: true,
+		Debug:     false, // set to true, if you want to show web inspector
+	})
+
+	// Run app
+	w.Run()
 }
-
 ```
 
 </details>
@@ -167,6 +168,12 @@ If you want to say «thank you» or/and support active development `Yandex.Music
 4. Join DigitalOcean at my [referral link](https://m.do.co/c/b41859fa9b6e) (your profit is **\$100** and I get \$25).
 
 Thanks for your support! 😘 Together, we make this project better every day.
+
+## TODO
+
+- Add GNU/Linux (amd64) version
+- Add icon for Windows 10 version
+- Fix low quality rendering Cocoa/WebKit on macOS
 
 ## License
 
