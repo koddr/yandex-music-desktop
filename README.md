@@ -85,6 +85,9 @@ MS Windows 10 version available thanks to [xgo](https://github.com/karalabe/xgo)
 
 ### For developers
 
+<details>
+<summary>Click to view</summary><br/>
+
 1. Clone this repository and go to folder `yandex-music-desktop`:
 
 ```console
@@ -141,6 +144,8 @@ foo@bar:~$ make archive-zip-windows # for Windows 10
 ```
 
 - You can found created ZIP into `./releases/Windows` folder.
+
+</details>
 
 ### For designers
 
