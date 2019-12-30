@@ -6,9 +6,9 @@
 
 <br/>
 
-### Looking for a similar desktop app for Yandex.Radio?
-
-- 📻 Un-official [Yandex.Radio Desktop](https://github.com/koddr/yandex-radio-desktop) app
+> ### Looking for a similar desktop app for Yandex.Radio?
+> 
+> - 📻 Un-official [Yandex.Radio Desktop](https://github.com/koddr/yandex-radio-desktop) app
 
 <br/>
 
