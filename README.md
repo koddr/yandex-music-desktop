@@ -151,9 +151,9 @@ foo@bar:~$ make archive-zip-windows # for Windows 10
 
 At `./static/macOS` folder you can found layered Adobe Photoshop source file (`.psd`) of macOS installation image: `yamusic_desktop.background.psd` ([CC0 1.0 Universal](https://creativecommons.org/share-your-work/public-domain/cc0)).
 
-### For Windows 10 users, who uninstall MS Edge browser
+### For Windows 10 users, who removed Microsoft Edge browser
 
-Yandex.Music Desktop app running from default OS webview layer, if you removed Edge — webview layer is Internet Explorer 11 (not Google Chrome/FireFox/Opera/etc., because it's third-party software for Windows!).
+Yandex.Music Desktop app running from default OS webview layer, if you removed Edge browser — webview layer is Internet Explorer 11 (not Google Chrome/FireFox/Opera/etc., because it's third-party software for Windows!).
 
 <details>
 <summary>I check it from my test-stand with Windows 10 Pro x64 (version 1903, OS build 18362.535)</summary><br/>
