@@ -1,3 +1,2 @@
-github.com/akavel/rsrc v0.8.0/go.mod h1:uLoCtb9J+EyAqh+26kdrTgmzRBFPGOolLWKpdxkKq+c=
-github.com/zserge/webview v0.0.0-20191103184548-1a9ebffc2601 h1:64QY2+QvOmOMbcCU3cyn7T+4Af0RehxMfedEwarpV1Y=
-github.com/zserge/webview v0.0.0-20191103184548-1a9ebffc2601/go.mod h1:a1CV8KR4Dd1eP2g+mEijGOp+HKczwdKHWyx0aPHKvo4=
+github.com/zserge/webview v0.0.0-20200516134046-4caf698fad53 h1:7qvr23qx/4M/y1/04h1XwQI+T+xZep+K+XuP3vBw3aE=
+github.com/zserge/webview v0.0.0-20200516134046-4caf698fad53/go.mod h1:qxc/5N3SOFrs3q+EAVHqaJ1oLbm+hHlDhfhRYg8x7wQ=

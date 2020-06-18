@@ -33,7 +33,7 @@ GNU/Linux → coming as soon as possible.
 
 ## ⚙️ Under the hood
 
-Since this is an open source project, you can easily see how it all **actually works**. The code is written with Go (Golang) `1.13.4` and using `Go Modules`.
+Since this is an open source project, you can easily see how it all **actually works**. The code is written with Go (Golang) `1.11.x` and using `Go Modules`.
 
 <details>
 <summary>Yandex.Music Desktop source code</summary><br/>
@@ -47,15 +47,14 @@ func main() {
 	// URL params
 	p := "origin=music_button-header&retpath=https%3A%2F%2Fmusic.yandex.com%2Fhome"
 
-	// Init app with webview options
-	w := webview.New(webview.Settings{
-		Title:     "Yandex.Music Desktop",
-		URL:       "https://passport.yandex.com/auth?" + p,
-		Width:     800,
-		Height:    960,
-		Resizable: true,
-		Debug:     false, // set to true, if you want to show web inspector
-	})
+	// Init app
+	w := webview.New(false)
+	defer w.Destroy()
+
+	// Settings
+	w.SetTitle("Yandex.Music Desktop")
+	w.SetSize(800, 960, webview.HintNone)
+	w.Navigate("https://passport.yandex.com/auth?" + p)
 
 	// Run app
 	w.Run()
@@ -96,7 +95,7 @@ foo@bar:~$ cd yandex-music-desktop
 ```
 
 2. Change anything you want 👌
-3. Build app binary again for macOS (it's required `Go` 1.13+):
+3. Build app binary again for macOS (it's required `Go` 1.11+):
 
 ```console
 foo@bar:~$ make build-macos # build .app for macOS
@@ -166,12 +165,6 @@ On screen (from left to right): _Yandex.Music Desktop app, Internet Explorer 11,
 
 > And, I thought, web site Yandex.Music not working in Internet Explorer 11 without Flash player (see [this](https://yandex.ru/support/music/troubleshooting/player.html?lang=en)), who not installed by default with system.
 
-## ⚠️ Terms of Use of Yandex.Music
-
-All logos, images and Yandex.Music service website — belong to their respective owners, namely YANDEX LLC.
-
-If you download, install and run _Yandex.Music Desktop_ application from current repository, you're already agree with official **Terms of Use of Yandex.Music**: [EN](https://yandex.com/legal/music_termsofuse/?lang=en), [RU](https://yandex.ru/legal/music_termsofuse/?lang=ru), [BY](https://yandex.by/legal/music_termsofuse/?lang=by), [KZ](https://yandex.kz/legal/music_termsofuse/?lang=kz).
-
 ## Developers
 
 - Idea and active development by [Vic Shóstak](https://github.com/koddr) (aka Koddr).
@@ -194,6 +187,12 @@ Thanks for your support! 😘 Together, we make this project better every day.
 - Add GNU/Linux (amd64) version
 - Add icon for Windows 10 version
 - Fix low quality rendering Cocoa/WebKit on macOS
+
+## ⚠️ Terms of Use of Yandex.Music
+
+All logos, images and Yandex.Music service website — belong to their respective owners, namely YANDEX LLC.
+
+If you download, install and run _Yandex.Music Desktop_ application from current repository, you're already agree with official **Terms of Use of Yandex.Music**: [EN](https://yandex.com/legal/music_termsofuse/?lang=en), [RU](https://yandex.ru/legal/music_termsofuse/?lang=ru), [BY](https://yandex.by/legal/music_termsofuse/?lang=by), [KZ](https://yandex.kz/legal/music_termsofuse/?lang=kz).
 
 ## License
 
