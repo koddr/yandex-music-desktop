@@ -7,7 +7,7 @@ run:
 	go run ./main.go
 	@echo "[OK] App is running!"
 
-builds: build-macos build-windows
+builds: build-macos build-linux build-windows
 	@echo "[OK] Builds for macOS and Windows complete!"
 
 build-macos:
@@ -19,6 +19,12 @@ build-macos:
 	&& GOOS=darwin GOARCH=amd64 go build -o ./build/macOS/Yandex.Music\ Desktop.app/Contents/MacOS/yamusic_desktop
 	@echo "[OK] Build for macOS complete!"
 
+build-linux:
+	rm -rf ./build/Linux/ \
+	&& mkdir -p ./build/Linux \
+	&& GOOS=linux GOARCH=amd64 go build -o ./build/Linux/yamusic_desktop
+	@echo "[OK] Build for Linux complete!"
+
 build-windows:
 	rm -rf ./build/Windows/ \
 	&& mkdir -p ./build/Windows/ \
@@ -27,14 +33,21 @@ build-windows:
 	&& mv ./build/Windows/yamusic_desktop-windows-10-amd64.exe ./build/Windows/Yandex.Music\ Desktop.exe
 	@echo "[OK] Build for MS Windows 10 x64 complete!"
 
-installers: installer-macos archive-zip-windows
-	@echo "[OK] Installers for macOS and Windows complete!"
+installers: installer-macos archive-tar-linux archive-zip-windows
+	@echo "[OK] Installers for macOS, Linux and Windows complete!"
 
 installer-macos:
 	rm -rf ./releases/macOS/ \
 	&& mkdir -p ./releases/macOS/ \
 	&& appdmg ./configs/macOS/appdmg.config.json ./releases/macOS/yamusic_desktop-macosx-amd64.dmg
 	@echo "[OK] macOS 10.11+ installer created!"
+
+archive-tar-linux:
+	rm -rf ./releases/Linux/ \
+	&& mkdir -p ./releases/Linux/ \
+	&& cd ./build/Linux \
+	&& tar -zcvf ../../releases/Linux/yamusic_desktop.tar.gz yamusic_desktop
+	@echo "[OK] GNU/Linux tar archive created!"
 
 archive-zip-windows:
 	rm -rf ./releases/Windows/ \

@@ -1,6 +1,6 @@
-<h1 align="center">🎵 Yandex.Music Desktop (un-official port of website)</h1>
+<h1 align="center">🎵 Yandex.Music Desktop (port of website)</h1>
 
-![Yandex.Music Desktop (un-official port of website)](static/GitHub/macOS_installer_screenshot.jpg)
+![Yandex.Music Desktop (port of website)](static/GitHub/macOS_installer_screenshot.jpg)
 
 <h3 align="center"><strong>Please note:</strong> this is <em>only</em> webview port of <a href="https://music.yandex.com" target="_blank">Yandex.Music</a> website as desktop app!</h3>
 
@@ -8,7 +8,7 @@
 
 ### Looking for a similar desktop app for Yandex.Radio?
 
-- 📻 Un-official [Yandex.Radio Desktop](https://github.com/koddr/yandex-radio-desktop) app
+- 📻 [Yandex.Radio Desktop](https://github.com/koddr/yandex-radio-desktop) app
 
 <br/>
 
@@ -26,10 +26,9 @@ Therefore, I was very upset that _Yandex.Music_ does not have a macOS (or Window
 
 ## 🔗 [Download](https://github.com/koddr/yandex-music-desktop/releases) latest version:
 
-- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.3/yamusic_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
-- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.2.3/yamusic_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
-
-GNU/Linux → coming as soon as possible.
+- [Apple macOS 10.11+ x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.3.0/yamusic_desktop-macosx-amd64.dmg) (`.dmg`, 2.39 MB)
+- [GNU/Linux x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.3.0/yamusic_desktop-linux-10-amd64.tar.gz) (`.tar.gz`, 1.7 MB)
+- [Microsoft Windows 10 x64](https://github.com/koddr/yandex-music-desktop/releases/download/0.3.0/yamusic_desktop-windows-10-amd64.zip) (`.zip`, 2.11 MB)
 
 ## ⚙️ Under the hood
 
@@ -82,6 +81,8 @@ Installation `.dmg` images for macOS was created by [node-appdmg](https://github
 
 MS Windows 10 version available thanks to [xgo](https://github.com/karalabe/xgo) (Go CGO cross compiler by [Péter Szilágyi](https://github.com/karalabe)).
 
+GNU/Linux version compiled and tested at Arch Linux (Manjaro 20).
+
 ### For developers
 
 <details>
@@ -89,33 +90,40 @@ MS Windows 10 version available thanks to [xgo](https://github.com/karalabe/xgo)
 
 1. Clone this repository and go to folder `yandex-music-desktop`:
 
-```console
-foo@bar:~$ git clone https://github.com/koddr/yandex-music-desktop.git
-foo@bar:~$ cd yandex-music-desktop
+```bash
+git clone https://github.com/koddr/yandex-music-desktop.git
+cd yandex-music-desktop
 ```
 
 2. Change anything you want 👌
 3. Build app binary again for macOS (it's required `Go` 1.11+):
 
-```console
-foo@bar:~$ make build-macos # build .app for macOS
+```bash
+make build-macos # build .app for macOS
+```
+
+- OR for GNU/Linux:
+
+```bash
+make build-linux # build binary file for Linux
 ```
 
 - OR for Windows 10:
 
 ```console
-foo@bar:~$ go get github.com/karalabe/xgo # install xgo cross compiler
-foo@bar:~$ make build-windows # build .exe for Windows 10
+go get github.com/karalabe/xgo # install xgo cross compiler
+make build-windows # build .exe for Windows 10
 ```
 
-4. Go to `./build/<macOS|Windows>` folder
+4. Go to `./build/<macOS|Linux|Windows>` folder
 
 - Copy `Yandex.Music Desktop.app` to your `/Applications` folder on macOS:
 
 ```console
-foo@bar:~$ sudo cp -R ./build/macOS/Yandex.Music\ Desktop.app /Applications
+sudo cp -R ./build/macOS/Yandex.Music\ Desktop.app /Applications
 ```
 
+- OR copy `yamusic_desktop` binary to your Linux system (`/usr/share/bin`) and create symlink to it.
 - OR copy `Yandex.Music Desktop.exe` to anything you want on Windows 10 system!
 
 #### (Optional) Create macOS installation images
@@ -123,23 +131,35 @@ foo@bar:~$ sudo cp -R ./build/macOS/Yandex.Music\ Desktop.app /Applications
 - Install `node-appdmg` (required `Node.js` and `npm`):
 
 ```console
-foo@bar:~$ npm install -g appdmg
+npm install -g appdmg
 ```
 
 - Create macOS installation image (`.dmg`):
 
 ```console
-foo@bar:~$ make installer-macos # for macOS 10.11+
+make installer-macos # for macOS 10.11+
 ```
 
 - You can found created image into `./releases/macOS` folder.
+
+#### (Optional) Create tar-archive for GNU/Linux
+
+- Create tar-archive:
+
+```console
+make archive-tar-linux # for Linux
+```
+
+- You can found created TAR into `./releases/Linux` folder.
+
+</details>
 
 #### (Optional) Create zip-archive for Windows 10
 
 - Create zip-archive:
 
 ```console
-foo@bar:~$ make archive-zip-windows # for Windows 10
+make archive-zip-windows # for Windows 10
 ```
 
 - You can found created ZIP into `./releases/Windows` folder.
@@ -184,7 +204,6 @@ Thanks for your support! 😘 Together, we make this project better every day.
 
 ## TODO
 
-- Add GNU/Linux (amd64) version
 - Add icon for Windows 10 version
 - Fix low quality rendering Cocoa/WebKit on macOS
 
