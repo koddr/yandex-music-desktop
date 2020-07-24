@@ -110,7 +110,7 @@ make build-linux # build binary file for Linux
 
 - OR for Windows 10:
 
-```console
+```bash
 go get github.com/karalabe/xgo # install xgo cross compiler
 make build-windows # build .exe for Windows 10
 ```
@@ -119,7 +119,7 @@ make build-windows # build .exe for Windows 10
 
 - Copy `Yandex.Music Desktop.app` to your `/Applications` folder on macOS:
 
-```console
+```bash
 sudo cp -R ./build/macOS/Yandex.Music\ Desktop.app /Applications
 ```
 
@@ -130,13 +130,13 @@ sudo cp -R ./build/macOS/Yandex.Music\ Desktop.app /Applications
 
 - Install `node-appdmg` (required `Node.js` and `npm`):
 
-```console
+```bash
 npm install -g appdmg
 ```
 
 - Create macOS installation image (`.dmg`):
 
-```console
+```bash
 make installer-macos # for macOS 10.11+
 ```
 
@@ -146,7 +146,7 @@ make installer-macos # for macOS 10.11+
 
 - Create tar-archive:
 
-```console
+```bash
 make archive-tar-linux # for Linux
 ```
 
@@ -158,7 +158,7 @@ make archive-tar-linux # for Linux
 
 - Create zip-archive:
 
-```console
+```bash
 make archive-zip-windows # for Windows 10
 ```
 
