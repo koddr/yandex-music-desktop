@@ -152,8 +152,6 @@ make archive-tar-linux # for Linux
 
 - You can found created TAR into `./releases/Linux` folder.
 
-</details>
-
 #### (Optional) Create zip-archive for Windows 10
 
 - Create zip-archive:
