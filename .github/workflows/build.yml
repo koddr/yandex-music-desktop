@@ -1,0 +1,94 @@
+name: Build
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.6.0
+
+      - name: Installing dependencies
+        run: npm install -g appdmg
+
+      - name: Build
+        run: make build-macos installer-macos
+
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: releases/macOS/yamusic_desktop-macosx-amd64.dmg
+
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+
+      - name: Build
+        shell: cmd
+        run: |
+          mkdir build\Windows
+          set CGO_CXXFLAGS="-I%cd%\libs\webview2"
+          go build -ldflags="-H windowsgui" -o "build\Windows\Yandex.Music Desktop.exe"
+          copy /Y libs\webview2\WebView2Loader.dll build\Windows
+
+      - name: Pack release
+        uses: vimtor/action-zip@v1
+        with:
+          files: build\Windows
+          dest: releases/Windows/yamusic_desktop-windows-10-amd64.zip
+
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: releases/Windows/yamusic_desktop-windows-10-amd64.zip
+
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+
+      - name: Installing dependencies
+        run: sudo apt install libgtk-3-dev libwebkit2gtk-4.0-dev
+
+      - name: Build
+        run: make build-linux archive-tar-linux
+
+      - name: Rename file
+        run: mv ./releases/Linux/yamusic_desktop.tar.gz ./releases/Linux/yamusic_desktop-linux-amd64.tar.gz
+
+      - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: releases/Linux/yamusic_desktop-linux-amd64.tar.gz
