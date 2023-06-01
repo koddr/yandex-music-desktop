@@ -1,6 +1,6 @@
 package main
 
-import "github.com/zserge/webview"
+import "github.com/webview/webview"
 
 func main() {
 	// URL params
